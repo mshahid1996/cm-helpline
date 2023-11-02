@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <div class="container-fluid " >
+      <a class="navbar-brand " href="#"><b>Officer-Dashboard:-</b></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/complainantInfo"><b>Complainant Info.</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/complaintSt"><b>Complaint Status</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/history"><b>History</b></a>
+          </li>
+          <button type="button" class="btn btn-outline-warning text-dark" style="margin-left: 650px;" (click)="logout()">Log-Out</button>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <!-- <button type="button" class="btn btn-outline-success text-dark  mt-3 ms-2" (click)=" get1()">Show Data</button> -->
+  <div class="container p-5">
+    <table class="table table-dark">
+        <thead >
+          <tr style="margin-left:0px;">
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Number</th>
+            <th scope="col">Adhar</th>
+            <th scope="col">Email</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let user of userList, let i = index" >
+            
+            <td>{{i+1}}</td>
+            <td>{{user.Name}}</td>
+            <td>{{user.Address}}</td>
+            <td>{{user.Number}}</td>
+            <td>{{user.Adhar}}</td>
+            <td>{{user.Email}}</td>
+            <td>{{user.Gender}}</td>
+            <td>
+             <button type="button" class="btn btn-outline-danger"  (click)="deleteUser(user)">Delete</button>        
+            </td>
+            <!-- <td>
+              <button type="button" class="btn btn-outline-warning mx-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Accept
+              </button>
+            </td> -->
+          </tr>
+    
+        </tbody>
+      </table>
+      </div>

@@ -1,0 +1,46 @@
+
+<div class= "shadow-lg p-3 mb-5 bg-body rounded mainform">
+    <form [formGroup]="regform ">
+        <div class = " shadow-sm p-3 mb-1 bg-body rounded  header">
+            <h1><b>Complaint Form</b></h1>
+        
+                <p>Please send us details about the incident you would like to report. Our Complaint Center will analyze your complaint and take the appropriate measures in order that the reported situation will not occur at any other time in the future. 
+                </p>
+            <hr>
+            </div>
+            <div class="shadow-sm p-3 mb-1 bg-body rounded form-group">
+
+                <label for="phoneNo"> <b>Phone Number: </b> </label>
+                <input type="text" id="phone" class="form-control" placeholder="Enter Number" formControlName="number" >
+        
+              </div>
+        
+            <div id="formsection " class="shadow-sm p-3 mb-5 bg-body rounded">
+                <label for="Select Your Area" class="shadow-sm p-3 bg-body rounded"><b>Select Your Area</b></label>
+                <select id="area" formControlName="area" >
+                  <option value="----">----</option>
+                  <option value="I.J Colony">Indore</option>
+                  <option value="Defence Colony">Ujjian</option>
+                  <option value="Dinga">Dewas</option>
+                  <option value="Gazi Colony">Ratlam</option>
+                  <option value="Naseera">Dhar</option>
+                  <option value="Tanveer Town">Bhopal</option>
+                  <option value="Tanveer Town">Jabalpur</option>
+                  <option value="Tanveer Town">Riwa</option>
+                  <option value="Tanveer Town">Sagar</option>
+                </select>
+
+                <!-- <label  class="shadow-sm p-3 mb-3 bg-body rounded"><b>What is the category of complain you are facing?</b></label>
+        
+                <p><input type="checkbox" formControlName="catagory" value="sports">Sports</p>
+                <p><input type="checkbox" formControlName="catagory" value="business">Business</p>
+                <p><input type="checkbox" formControlName="catagory" value="health">Health</p>
+                <label for="subject" class="shadow-sm p-3 mb-2 bg-body rounded"><b>Complaint Details:</b></label> -->
+
+                <textarea id="subject" formControlName="details" placeholder="Enter your complaint details......." style="height:200px"></textarea>
+                <button type="button" class="btn btn-outline-primary" (click)="addComplain()">Submit</button>
+                <button type="button"  class="btn btn-outline-success mx-4 px-3"
+                routerLink="/userdashboard">Back!!</button>
+              </div>
+    </form>
+</div>

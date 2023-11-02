@@ -1,0 +1,35 @@
+ <div class="container-fluid col d-flex justify-content-center my-5 ">
+ <div class="card shadow p-3 mb-3 bg-body rounded border border-success" style="width: 23rem;">
+    <img src="https://www.w3schools.com/bootstrap4/img_avatar1.png" class="card-img-top" alt="...">
+    <form [formGroup]="regDetail">
+    <div class="card-body">
+      <h5 class="card-title text-center mb-2 text-success"><b>Officer-Login</b></h5>
+      <!-- Email input -->
+      <div class="form-outline my-2">
+        <input type="text" formControlName="Email" id="form3Example3" class="form-control form-control-lg"
+          placeholder="Enter Email" />
+      </div>
+
+      <!-- Password input -->
+      <div class="form-outline my-2">
+        <input type="password" formControlName="password" id="form3Example4" class="form-control form-control-lg"
+          placeholder="Enter password"/>
+      </div>
+      <button type="button"  class="btn btn-outline-success btn-lg"
+      style="padding-left: 7.4rem; padding-right: 7.4rem;" routerLink="/officerDashboard" (click)="GetLogin()">Sign-In</button>
+    </div>
+    </form>
+  </div>
+  </div>
+
+  <footer>
+    <div class="container-fluid mb-lg-0" style="margin: 0px; padding: 0px; box-sizing: border-box;">
+      <!-- Copyright -->
+      <div class="text-center p-3 bg-dark text-white">
+        <b> © Copyright 2022 CM Helpline Portal-All Rights Reserved </b>
+      </div>
+      <!-- Copyright -->
+    </div>
+    <!-- End of .container -->
+    </footer>
+  
